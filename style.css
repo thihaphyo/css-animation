@@ -1,0 +1,324 @@
+* {
+    margin:0px;
+    padding:0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url("./underwater.jpeg");
+    background-repeat: no-repeat;
+}
+
+.nav {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin {
+    margin-left: auto;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: slideInLeft 0.5s linear forwards;
+}
+
+.btnSignin {
+    background-color: transparent;
+    border: 1px white solid;
+    outline: none !important;
+    cursor: pointer;
+    padding: 10px 50px 10px 50px;
+    color: white;
+    border-radius: 18px;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: all 0.2s ease-in-out 0s;
+    animation: slideInRight 0.5s linear forwards;
+}
+
+.content {
+    margin-top: 50px;
+    margin-left: 5%;
+}
+
+.mainTitle {
+    font-size: 150px;
+    color:white;
+    text-shadow: 1px 1px 2px cyan;
+    opacity: 1;
+    animation: FadeIn 1.3s linear forwards;
+}
+
+.subTitle {
+    font-size: 20px;
+    color:white;
+    margin-top: 5px;
+    text-shadow: 1px 1px 2px cyan;
+    padding-left: 10px;
+    animation: FadeIn 1.3s linear forwards;
+}
+
+.body {
+    font-size: 20px;
+    color:white;
+    margin-top: 5px;
+    width: 50%;
+    text-shadow: 1px 1px 2px cyan;
+    margin-top: 10px;
+    line-height: 150%;
+    padding-left: 10px;
+    animation: FadeIn 1.3s linear forwards;
+}
+
+.action {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.play {
+    width: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    outline: none !important;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    animation: slideFromBottom 0.8s linear forwards;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.play:hover, .btnSignin:hover {
+    transform:scale(1.1,1.1)
+}
+
+.bubble {
+    position: absolute;
+    
+    left: 5%;
+}
+
+.b1 {
+    top: 65%;
+    animation: bubbleanimation 5s ease-in-out normal infinite;
+}
+
+.b2 {
+    left: 15%;
+    top: 75%;
+    animation: bubbleanimation 5s ease-in-out normal infinite 0.5s;
+}
+
+.b3 {
+    left: 25%;
+    top: 65%;
+    animation: bubbleanimation 5s ease-in-out normal infinite;
+}
+
+.b4 {
+    left: 65%;
+    top: 75%;
+    animation: bubbleanimation 5s ease-in-out normal infinite 0.5s;
+}
+
+.b5 {
+    left: 75%;
+    top: 65%;
+    animation: bubbleanimation 5s ease-in-out normal infinite ;
+}
+.b6 {
+    left: 85%;
+    top: 65%;
+    animation: bubbleanimation 5s ease-in-out normal infinite 0.8s;
+}
+
+.b7 {
+    left: 15%;
+    top: 65%;
+    opacity: 0;
+    animation: bubbleanimation 5s ease-in-out normal infinite 1.9s;
+}
+
+.b8 {
+    left: 65%;
+    top: 65%;
+    opacity: 0;
+    animation: bubbleanimation 5s ease-in-out normal infinite 1.8s;
+}
+
+.bubble > img{
+    width: 50px;
+    height: 50px;
+}
+
+.fish {
+    position: absolute;
+    right: 20px;
+    width: 100px;
+    height: 50px;
+    float: right;
+}
+
+.fish > img {
+    width: 100px;
+    height: 50px;
+}
+
+.f1 {
+    top: 10%;
+    animation: fishanimation1 8s ease-in-out normal infinite;
+}
+
+.f2{
+    top: 30%;
+    animation: fishanimation1 5s ease-in-out normal infinite;
+}
+
+.f3{
+    top: 60%;
+    animation: fishanimation2 8s ease-in-out normal infinite;
+}
+
+.f4{
+    top: 75%;
+    animation: fishanimation2 15s ease-in-out normal infinite;
+}
+
+
+/* aimations */
+
+@keyframes FadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes bubbleanimation {
+    from {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-450px);
+        opacity: 0;
+    }
+}
+
+@keyframes fishanimation1 {
+
+    0% {
+        right: 5%;
+    }
+
+    20%{
+        transform: translateY(80px);
+    }
+
+    40% {
+        transform: translateY(0px);
+    }
+
+    60% {
+        transform: translateY(80px);
+    }
+
+    80% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        right: 100%; 
+        transform: translateY(80px);
+    }
+}
+
+@keyframes fishanimation2 {
+
+    0% {
+        right: -10%;
+    }
+
+    20%{
+        transform: translateY(80px) rotate(-30deg);
+    }
+
+    40% {
+        transform: translateY(0px);
+    }
+
+    60%{
+        transform: translateY(80px) rotate(-30deg);
+    }
+
+    80% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        right: 100%; 
+        transform: translateY(80px) rotate(30deg);
+    }
+}
+
+@keyframes fishanimation3 {
+
+    0% {
+        right: -10%;
+    }
+
+    20%{
+        transform: translateY(10px) rotate(-10deg);
+    }
+
+    40% {
+        transform: translateY(0px);
+    }
+
+    60%{
+        transform: translateY(10px) rotate(-10deg);
+    }
+
+    80% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        right: 100%; 
+        transform: translateY(10px) rotate(10deg);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
